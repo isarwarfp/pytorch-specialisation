@@ -151,41 +151,29 @@ cython_debug/
 *.pkl
 *.pickle
 
-# Dataset files - EXCLUDE ALL DATASET BINARIES
-# MNIST/EMNIST/FashionMNIST binary files
-*-idx3-ubyte
-*-idx1-ubyte
-*-ubyte
+# Dataset directories (exclude all dataset folders)
+# Standard PyTorch datasets
+**/data/
+**/dataset/
+**/datasets/
+.datasets/
+*_data/
+*_dataset/
+*_datasets/
 
-# CIFAR datasets
-**/cifar-10-batches-py/
-**/cifar-100-python/
-**/cifar*/data_batch_*
-**/cifar*/test_batch
-**/cifar*/meta
-**/cifar*/train
-**/cifar*/test
-
-# Dataset directories
-**/data/MNIST/
-**/data/FashionMNIST/
-**/data/CIFAR*/
-**/EMNIST_data/
-**/FashionMNIST/
+# Specific dataset folders
 **/MNIST/
 **/EMNIST/
+**/FashionMNIST/
 **/CIFAR*/
 **/ImageNet/
 
-# Large image dataset folders
+# Custom dataset folders
 **/flowers/
 **/intel_nature/
-**/plants_dataset/*.jpg
-**/plants_dataset/*.jpeg
-**/plants_dataset/*.png
-**/*_images/*.jpg
-**/*_images/*.jpeg
-**/*_images/*.png
+**/plants_dataset/
+**/*_images/
+**/*_photos/
 
 # Temporary files
 *.tmp
@@ -210,6 +198,11 @@ models/*.pt
 *.tfrecord
 *.npy
 *.npz
+
+# Dataset CSV files (exclude from git)
+**/plants_dataset/**
+**/data_with_features.csv
+**/df_labels*.csv
 
 # Compressed files
 *.tar
